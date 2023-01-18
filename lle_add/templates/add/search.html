@@ -1,0 +1,38 @@
+{% extends "../base.html" %}
+
+{% block content %}
+  <h1>Search for a place to add</h1>
+  
+  <form action="" method="post">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit">
+  </form>
+
+  {% if places %}
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Address</th>
+          <th>Add</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for place in places %}
+        <tr>
+          <th>{{ forloop.counter }}</th>
+          <td>{{ place.namedetails.name }}</td>
+          <td>{{ place.type }}</td>
+          <td>{{ place.display_name }} </td>
+          <td><a href="/add/place?name={{ place.namedetails.name }}">Add</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}  
+{% endblock %}
