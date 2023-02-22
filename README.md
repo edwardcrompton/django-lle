@@ -1,3 +1,23 @@
+# Running this locally
+
+Followed Django installation steps from here: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/development_environment#installing_the_virtual_environment_software
+
+Start the virtual environment
+
+> mkvirtualenv my_django_environment
+
+Install Django
+
+> pip3 install django~=4.0
+
+* What does installation do? Where does Django get installed?
+
+Tried to install from requirements.txt
+
+> pip3 install -r requirements.txt
+
+* Some of these packages are huge. May be far too much bloat here - possibly because I'm installing the Github codebase version. Try to strip down to only the required packages.
+
 # GitHub Codespaces ♥️ Django
 
 Welcome to your shiny new Codespace running Django! We've got everything fired up and running for you to explore Django.
