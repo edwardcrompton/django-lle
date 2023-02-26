@@ -12,11 +12,29 @@ Install Django
 
 * What does installation do? Where does Django get installed?
 
-Tried to install from requirements.txt
+Install from requirements.txt
 
 > pip3 install -r requirements.txt
 
-* Some of these packages are huge. May be far too much bloat here - possibly because I'm installing the Github codebase version. Try to strip down to only the required packages.
+Run the server
+
+> python3 manage.py runserver
+
+## Adding a place
+
+Go to: http://127.0.0.1:8000/add/search/
+
+Search for a place.
+
+When I click add I should be taken to a form prepopulated with information about that place.
+- OSM id
+- Type of place
+- Full address of the place
+- Postcode
+
+I can then save the form and the place will be added to the database.
+
+Once saved in the database, I can associate a sound file with the place in order to pronounce it.
 
 # GitHub Codespaces ♥️ Django
 
